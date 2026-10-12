@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ristorante Pizzeria Venezia – Italienische Küche in Berlin</title>
+  <meta name="description" content="Ristorante Pizzeria Venezia in der Rudower Str. 12, Berlin: Steinofenpizza, hausgemachte Pasta, Fleisch, Fisch und erlesene italienische Weine. Täglich 12–23 Uhr. Jetzt Tisch reservieren.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Ristorante - Pizzeria Venezia",
+    "servesCuisine": ["Italienisch", "Pizza", "Pasta"],
+    "telephone": "+49 30 66463755",
+    "email": "ristorante.venezia@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rudower Str. 12",
+      "postalCode": "12351",
+      "addressLocality": "Berlin",
+      "addressCountry": "DE"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    }],
+    "acceptsReservations": true,
+    "paymentAccepted": "Bargeld, EC-Karte, Visa, Mastercard, Maestro, kontaktlos"
+  }
+  </script>
+  <script>
+    // Intro nur einmal pro Besuch und nicht bei „Bewegung reduzieren“
+    try {
+      if (sessionStorage.getItem('venezia-intro') || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('no-intro');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- INTRO / MINI-TRAILER -->
+  <div class="intro-film" id="introFilm" aria-hidden="true">
+    <div class="if-center">
+      <p class="if-kicker">Ristorante · Pizzeria · Berlin</p>
+      <h2 class="if-title"><span>V</span><span>e</span><span>n</span><span>e</span><span>z</span><span>i</span><span>a</span></h2>
+      <div class="if-line"></div>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Venezia – zum Seitenanfang">
+      <span class="brand-name">Venezia</span>
+      <span class="brand-sub">Ristorante · Pizzeria</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <a href="#cucina">La Cucina</a>
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#feiern">Feiern</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav-cta" href="#reservieren">Tisch reservieren</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('images/abend.jpg')" role="img" aria-label="Gedeckte Tafel im Restaurant Venezia am Abend"></div>
+      <div class="hero-inner">
+        <p class="eyebrow reveal">Benvenuti a Berlino</p>
+        <h1 class="hero-title reveal">Venezia</h1>
+        <p class="hero-lead reveal">Steinofenpizza, hausgemachte Pasta<br>und erlesene Weine aus Italien.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-red" href="#reservieren">Tisch reservieren</a>
+          <a class="btn btn-ghost" href="#speisekarte">Zur Speisekarte</a>
+        </div>
+      </div>
+      <ul class="hero-facts">
+        <li><span>Adresse</span>Rudower Str. 12, 12351 Berlin</li>
+        <li><span>Geöffnet</span>Täglich 12 – 23 Uhr</li>
+        <li><span>Telefon</span><a href="tel:+493066463755">030 66 46 37 55</a></li>
+      </ul>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section" id="cucina">
+      <div class="intro-text reveal">
+        <p class="eyebrow">Benvenuti!</p>
+        <h2 class="h2">Herzlich willkommen in <em>unserem</em> und <em>Ihrem</em> Venezia.</h2>
+        <div class="rule"></div>
+        <p>Wir sind die neue Lieblingspizzeria in Ihrer Nachbarschaft. Wir bieten Ihnen eine ausgesuchte italienische Küche, erlesene Weine sowie einen angenehmen Aufenthalt.</p>
+        <p class="signature">Lassen Sie sich von Italiens Gastfreundschaft begeistern.</p>
+      </div>
+      <figure class="intro-img reveal">
+        <img src="images/weinwand.jpg" alt="Rote Lederbänke und die Weinwand im Venezia" loading="lazy">
+        <figcaption>La nostra cantina – unsere Weinwand</figcaption>
+      </figure>
+    </section>
+
+    <!-- SPECIALITÀ -->
+    <section class="known section">
+      <header class="section-head reveal">
+        <p class="eyebrow">Le nostre specialità</p>
+        <h2 class="h2">Wofür man uns kennt</h2>
+      </header>
+      <div class="known-grid">
+        <article class="known-item reveal">
+          <span class="known-num">01</span>
+          <h3>Pizza</h3>
+          <p>Aus dem Steinofen, belegt mit Tomatensauce und Mozzarella – von der klassischen Margherita bis zur <em>Pizza Venezia</em> mit Feigen, Ziegenkäse, Rucola und Bresaola.</p>
+        </article>
+        <article class="known-item reveal">
+          <span class="known-num">02</span>
+          <h3>Pasta</h3>
+          <p>Über zwanzig Nudelgerichte: Pappardelle in Butter-Salbei, Linguine al Limone, Pennette Venezia mit Rinderfiletspitzen oder die Lasagna al Forno.</p>
+        </article>
+        <article class="known-item reveal">
+          <span class="known-num">03</span>
+          <h3>Carne &amp; Pesce</h3>
+          <p>Rumpsteak vom Grill, zarte Schweinefiletmedaillons, Saltimbocca alla Romana, Lachs, Zander und Scampi – serviert mit Tagesbeilage und Salat.</p>
+        </article>
+        <article class="known-item reveal">
+          <span class="known-num">04</span>
+          <h3>Vino</h3>
+          <p>Unsere Weinwand reicht bis unter die Decke. Fragen Sie nach der passenden Flasche zu Ihrem Gericht – oder genießen Sie unsere offenen Hausweine.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURE: BISTECCA -->
+    <section class="feature">
+      <div class="feature-img reveal">
+        <img src="images/bistecca.jpg" alt="Gegrillte Bistecca mit Bandnudeln und Trüffel-Rahmsauce" loading="lazy">
+      </div>
+      <div class="feature-text reveal">
+        <p class="eyebrow">Dalla cucina</p>
+        <h2 class="h2">Bistecca al&nbsp;Tartufo</h2>
+        <div class="rule"></div>
+        <p>Vom Grill, mit cremiger Trüffelsauce und hausgemachten Bandnudeln. Eines der Gerichte, für die unsere Gäste immer wieder zu uns kommen.</p>
+        <a class="link-arrow" href="#speisekarte" data-tab="manzo">Fleischgerichte ansehen</a>
+      </div>
+    </section>
+
+    <!-- SPEISEKARTE -->
+    <section class="menu section" id="speisekarte">
+      <header class="section-head reveal">
+        <p class="eyebrow">Il menù</p>
+        <h2 class="h2">Unsere Speisekarte</h2>
+      </header>
+
+      <div class="menu-tabs" role="tablist" id="menuTabs" aria-label="Kategorien der Speisekarte"></div>
+      <div class="menu-panel" id="menuPanel" role="tabpanel" aria-live="polite"></div>
+
+      <p class="menu-note">Alle Preise in Euro inkl. MwSt. Informationen zu Allergenen und Zusatzstoffen erhalten Sie bei unserem Service.</p>
+      <div class="menu-actions">
+        <a class="btn btn-ghost" href="Speisekarte.pdf" target="_blank" rel="noopener">Speisekarte als PDF</a>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="gallery section" id="galerie">
+      <header class="section-head reveal">
+        <p class="eyebrow">Galleria</p>
+        <h2 class="h2">Zu Gast im Venezia</h2>
+      </header>
+      <div class="gallery-grid">
+        <button class="g-item g-wide reveal" data-full="images/abend.jpg"><img src="images/abend.jpg" alt="Festlich gedeckte Tafel am Abend" loading="lazy"></button>
+        <button class="g-item reveal" data-full="images/bistecca.jpg"><img src="images/bistecca.jpg" alt="Bistecca mit Bandnudeln" loading="lazy"></button>
+        <button class="g-item reveal" data-full="images/gastraum.jpg"><img src="images/gastraum.jpg" alt="Gastraum mit roten Säulen und Venedig-Gemälde" loading="lazy"></button>
+        <button class="g-item g-wide reveal" data-full="images/tische.jpg"><img src="images/tische.jpg" alt="Tische mit rot-weiß karierten Tischdecken" loading="lazy"></button>
+        <button class="g-item g-wide reveal" data-full="images/weinwand.jpg"><img src="images/weinwand.jpg" alt="Weinwand über den roten Lederbänken" loading="lazy"></button>
+      </div>
+    </section>
+
+    <!-- FEIERN & SERVICES -->
+    <section class="events" id="feiern">
+      <div class="events-bg" style="background-image:url('images/gastraum.jpg')" aria-hidden="true"></div>
+      <div class="events-inner section">
+        <header class="section-head reveal">
+          <p class="eyebrow">Occasioni</p>
+          <h2 class="h2">Feiern, genießen, mitnehmen</h2>
+        </header>
+        <div class="events-grid">
+          <div class="event reveal">
+            <h3>Hochzeiten &amp; Feiern</h3>
+            <p>Ob Hochzeit, Geburtstag oder Firmenessen – wir richten Ihre Feier aus. Sprechen Sie uns an, wir stellen gern ein Menü für Sie zusammen.</p>
+          </div>
+          <div class="event reveal">
+            <h3>Außenbereich</h3>
+            <p>An warmen Tagen servieren wir auch draußen – Pizza und ein Glas Wein unter freiem Himmel.</p>
+          </div>
+          <div class="event reveal">
+            <h3>Zum Mitnehmen</h3>
+            <p>Alle Gerichte gibt es auch zum Abholen. Einfach anrufen, bestellen und frisch mitnehmen.</p>
+          </div>
+          <div class="event reveal">
+            <h3>Hunde willkommen</h3>
+            <p>Ihr Vierbeiner ist bei uns gern gesehen.</p>
+          </div>
+        </div>
+        <div class="events-cta reveal">
+          <a class="btn btn-red" href="tel:+493066463755">Feier anfragen · 030 66 46 37 55</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVIEREN -->
+    <section class="reserve section" id="reservieren">
+      <div class="reserve-text reveal">
+        <p class="eyebrow">Prenotazione</p>
+        <h2 class="h2">Tisch reservieren</h2>
+        <div class="rule"></div>
+        <p>Am schnellsten geht es telefonisch. Oder schicken Sie uns Ihre Wunschzeit – wir bestätigen Ihre Reservierung so bald wie möglich.</p>
+        <a class="phone-big" href="tel:+493066463755">030 66 46 37 55</a>
+        <p class="small">Täglich von 12 bis 23 Uhr</p>
+      </div>
+      <form class="reserve-form reveal" id="reserveForm" novalidate>
+        <div class="field">
+          <label for="r-name">Name</label>
+          <input id="r-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="r-date">Datum</label>
+            <input id="r-date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="r-time">Uhrzeit</label>
+            <input id="r-time" name="time" type="time" min="12:00" max="22:00" step="900" required>
+          </div>
+          <div class="field">
+            <label for="r-guests">Personen</label>
+            <select id="r-guests" name="guests" required>
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+              <option value="mehr als 8">mehr als 8</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="r-phone">Telefon</label>
+          <input id="r-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="r-note">Anmerkung <span class="opt">(optional)</span></label>
+          <textarea id="r-note" name="note" rows="3"></textarea>
+        </div>
+        <button class="btn btn-red btn-block" type="submit">Anfrage per E-Mail senden</button>
+        <p class="form-hint" id="formHint">Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage.</p>
+      </form>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact section" id="kontakt">
+      <div class="contact-col reveal">
+        <p class="eyebrow">Dove siamo</p>
+        <h2 class="h2">Kontakt &amp; Anfahrt</h2>
+        <div class="rule"></div>
+        <address>
+          Ristorante – Pizzeria Venezia<br>
+          Rudower Str. 12<br>
+          12351 Berlin
+        </address>
+        <p><a href="tel:+493066463755">030 66 46 37 55</a><br>
+           <a href="mailto:ristorante.venezia@outlook.com">ristorante.venezia@outlook.com</a></p>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Rudower%20Str.%2012%2C%2012351%20Berlin" target="_blank" rel="noopener">Route in Google Maps</a>
+      </div>
+      <div class="contact-col reveal">
+        <h3 class="h3">Öffnungszeiten</h3>
+        <table class="hours" id="hours">
+          <tr data-day="1"><th>Montag</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="2"><th>Dienstag</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="3"><th>Mittwoch</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="4"><th>Donnerstag</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="5"><th>Freitag</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="6"><th>Samstag</th><td>12:00 – 23:00</td></tr>
+          <tr data-day="0"><th>Sonntag</th><td>12:00 – 23:00</td></tr>
+        </table>
+        <p class="open-status" id="openStatus"></p>
+      </div>
+      <div class="contact-col reveal">
+        <h3 class="h3">Bezahlung</h3>
+        <ul class="pay">
+          <li>Bargeld</li>
+          <li>EC-Karte</li>
+          <li>Visa · Mastercard · Maestro</li>
+          <li>Kontaktlos</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-name">Venezia</span>
+      <span class="brand-sub">Ristorante · Pizzeria · Berlin</span>
+    </div>
+    <p class="footer-claim">Grazie e a presto!</p>
+    <nav class="footer-links" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+    <p class="copy">© <span id="year"></span> Ristorante – Pizzeria Venezia</p>
+  </footer>
+
+  <a class="mobile-call" href="tel:+493066463755" aria-label="Venezia anrufen">Jetzt anrufen &amp; reservieren</a>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Schließen">×</button>
+    <img id="lbImg" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
