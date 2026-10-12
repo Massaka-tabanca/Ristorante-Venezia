@@ -28,6 +28,8 @@ document.documentElement.classList.remove('no-js');
 
 // ---------- Speisekarte (Quelle: Speisekarte.pdf) ----------
 // Jeder Eintrag: [Nr, Name, Beschreibung, Preis]  – Preis darf auch eine Liste von [Größe, Preis] sein.
+// Optional pro Kategorie: bestseller: { img: "images/…jpg", name: "Gericht", text: "kurze Beschreibung" }
+//   → erscheint als großes Foto über der Kategorie. Fotos bitte nur echte Fotos vom Restaurant.
 const MENU = [
   {
     id: 'pizze', tab: 'Pizze', it: 'Le Nostre', de: 'Pizze',
@@ -98,6 +100,7 @@ const MENU = [
   },
   {
     id: 'manzo', tab: 'Carne', it: 'Carne', de: 'Fleischgerichte',
+    bestseller: { img: 'images/bistecca.jpg', name: 'Bistecca al Tartufo', text: 'Vom Grill, mit cremiger Trüffelsauce und hausgemachten Bandnudeln.' },
     note: 'Alle Fleischgerichte werden mit Tagesbeilage und Salat serviert.',
     items: [
       [110, 'Bistecca alla Griglia', 'Rumpsteak vom Grill mit Kräuterbutter', '25,90'],
@@ -211,7 +214,19 @@ function renderCategory(cat) {
       ${desc ? `<p class="menu-desc">${esc(desc)}</p>` : ''}
     </li>`).join('');
 
+  const b = cat.bestseller;
+  const best = b ? `
+    <figure class="menu-best">
+      <img src="${b.img}" alt="${esc(b.name)}" loading="lazy">
+      <figcaption>
+        <span class="menu-best-label">Unser Bestseller</span>
+        <span class="menu-best-name">${esc(b.name)}</span>
+        ${b.text ? `<span class="menu-best-text">${esc(b.text)}</span>` : ""}
+      </figcaption>
+    </figure>` : "";
+
   return `
+    ${best}
     <div class="menu-cat-head">
       <h3 class="menu-cat-title"><em>${esc(cat.it)}</em> ${esc(cat.de)}</h3>
       ${cat.note ? `<p class="menu-cat-note">${esc(cat.note)}</p>` : ''}

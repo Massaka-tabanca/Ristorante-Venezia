@@ -864,3 +864,62 @@ body { font-variant-numeric: lining-nums; }
 .hero-inner .reveal:nth-child(2) { transition-delay: .12s; }
 .hero-inner .reveal:nth-child(3) { transition-delay: .24s; }
 .hero-inner .reveal:nth-child(4) { transition-delay: .36s; }
+
+/* Begrüßungsbild: gleichmäßiger Rahmen, Bildunterschrift mit Abstand */
+.intro-img::before { display: none; }
+.intro-frame {
+  border: 1px solid var(--rosso);
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(26,20,20,.10);
+}
+.intro-frame img { box-shadow: none !important; }
+.intro-img figcaption {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 19px;
+  color: var(--text-dim);
+}
+@media (max-width: 900px) { .intro-frame { padding: 10px; } }
+
+/* Kontakt nur noch zweispaltig (Bezahlung entfernt) */
+.contact { grid-template-columns: 1.2fr 1fr; }
+@media (max-width: 1080px) {
+  .contact { grid-template-columns: 1fr 1fr; }
+  .contact-col:first-child { grid-column: auto; }
+}
+@media (max-width: 640px) { .contact { grid-template-columns: 1fr; } }
+
+/* Bestseller-Foto über einer Speisekarten-Kategorie */
+.menu-best {
+  position: relative;
+  margin: 0 0 48px;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  box-shadow: 0 18px 40px rgba(26,20,20,.12);
+}
+.menu-best img { width: 100%; height: 100%; object-fit: cover; }
+.menu-best figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 70px 32px 26px;
+  background: linear-gradient(180deg, rgba(18,14,14,0), rgba(18,14,14,.82));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu-best-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #ff8f93;
+}
+.menu-best-name { font-family: var(--serif); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; }
+.menu-best-text { font-size: 15px; color: rgba(255,255,255,.85); max-width: 520px; }
+@media (max-width: 640px) {
+  .menu-best { aspect-ratio: 4 / 3; margin-bottom: 36px; }
+  .menu-best figcaption { padding: 50px 20px 18px; }
+}
